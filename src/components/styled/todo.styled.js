@@ -150,7 +150,7 @@ export const ThemeIcon = styled.img`
 `
 export const List = styled(Vstack)`
     display: flex;
-    width: fit-content;
+    width: 100%;
     min-height: 100%;
     border-radius: 5px;
     background-color: ${props => props.theme === 'light' ? 'var(--Very-Light-Gray)' : 'var(--Very-Dark-Desaturated-Blue)'};
@@ -164,8 +164,8 @@ export const ListItems = styled(Hstack)`
     font-size: .9em;
     font-weight: var(--regular);
     letter-spacing: .1em;
-    padding: 20px 0;
     border-radius: 5px;
+    padding:18px 0;
     border-bottom: 1px solid ${props => props.theme === 'light' ? 'var(--Light-Grayish-Blue-LT)' : 'var(--Very-Dark-Grayish-Blue)'};
     color: ${props => props.theme === 'light' ? 'var(--Very-Dark-Grayish-Blue)' : 'var(--Light-Grayish-Blue)'};
     background-color: ${props => props.theme === 'light' ? 'var(--Very-Light-Gray)' : 'var(--Very-Dark-Desaturated-Blue)'};
