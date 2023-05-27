@@ -77,6 +77,7 @@ export const StyledTodo = styled(Vstack)`
         margin: 20px 0;
         @media screen and (max-width: 600px){
             display: flex;
+            box-shadow: ${props => props.theme === 'light' ? '0 10px 20px 2px rgba(0,0,0,0.15)' : '0px 10px 20px 2px rgba(0, 0, 0, 0.5)'};
         }
     }
     .drag_drop{
@@ -149,7 +150,7 @@ export const ThemeIcon = styled.img`
 `
 export const List = styled(Vstack)`
     display: flex;
-    width: 100%;
+    width: fit-content;
     min-height: 100%;
     border-radius: 5px;
     background-color: ${props => props.theme === 'light' ? 'var(--Very-Light-Gray)' : 'var(--Very-Dark-Desaturated-Blue)'};
@@ -157,12 +158,13 @@ export const List = styled(Vstack)`
 `
 export const ListItems = styled(Hstack)`
     width: 100%;
-    height: 62px;
+    height: auto;
     justify-content: space-between;
     align-items: center;
     font-size: .9em;
     font-weight: var(--regular);
     letter-spacing: .1em;
+    padding: 20px 0;
     border-radius: 5px;
     border-bottom: 1px solid ${props => props.theme === 'light' ? 'var(--Light-Grayish-Blue-LT)' : 'var(--Very-Dark-Grayish-Blue)'};
     color: ${props => props.theme === 'light' ? 'var(--Very-Dark-Grayish-Blue)' : 'var(--Light-Grayish-Blue)'};

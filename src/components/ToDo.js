@@ -167,11 +167,13 @@ export const ToDo = () => {
                     onDrop={(e) => handleDrop(e, todo.id)}
                 >
                     <Hstack className='aligner'>
-                        <input
-                            type="checkbox"
-                            checked={todo.completed}
-                            onChange={() => handleComplete(todo.id)}
-                        />
+                        <label htmlFor="checkbox">
+                            <input
+                                type="checkbox"
+                                checked={todo.completed}
+                                onChange={() => handleComplete(todo.id)}
+                            />
+                        </label>
                         <p className={todo.completed ? 'completed-text' : ''}>
                             {todo.task}
                         </p>
