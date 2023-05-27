@@ -26,6 +26,7 @@ export const Header = styled.div`
         min-height: 250px;
     }
     @media screen and (max-width: 600px){
+        width: 100%;
         min-height: 250px;
         background-image: ${props => props.theme === 'light' ? `url(${bgheadermobilelight})` : `url(${bgheadermobiledark})`};
         background-size: cover;
@@ -61,6 +62,9 @@ export const StyledTodo = styled(Vstack)`
         background-color: ${props => props.theme === 'light' ? 'var(--Very-Light-Gray)' : 'var(--Very-Dark-Desaturated-Blue)'};
         color: ${props => props.theme === 'light' ? 'var(--Very-Dark-Grayish-Blue)' : 'var(--Light-Grayish-Blue-DT)'};
         padding:0 0 0 65px;
+        @media screen and (max-width: 600px){
+            padding: 0;
+        }
     }
     .mobile_status_spreader{
         display: none;
@@ -115,7 +119,7 @@ export const SearchBar = styled.div`
     }
     input[type="text"]{
         width: 100%;
-        height: 100%;
+        height: auto;
         padding: 0 65px;
         border: none;
         border-radius: 5px;
@@ -152,7 +156,6 @@ export const List = styled(Vstack)`
     box-shadow: ${props => props.theme === 'light' ? '0 10px 20px 2px rgba(0,0,0,0.15)' : '0px 10px 20px 2px rgba(0, 0, 0, 0.5)'};
 `
 export const ListItems = styled(Hstack)`
-    display: flex;
     width: 100%;
     height: 62px;
     justify-content: space-between;
@@ -165,7 +168,6 @@ export const ListItems = styled(Hstack)`
     color: ${props => props.theme === 'light' ? 'var(--Very-Dark-Grayish-Blue)' : 'var(--Light-Grayish-Blue)'};
     background-color: ${props => props.theme === 'light' ? 'var(--Very-Light-Gray)' : 'var(--Very-Dark-Desaturated-Blue)'};
     .aligner{
-        display: flex;
         align-items: center;
     }
     input{
@@ -189,6 +191,8 @@ export const ListItems = styled(Hstack)`
         background-position: center;
     }
     p{
+        display: flex;
+        flex-wrap: wrap;
         font-weight: var(--bold);
         letter-spacing: .001em;
         padding: 0 20px;
